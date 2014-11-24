@@ -11,6 +11,9 @@ namespace TCCJBS
 {
     public class Global : HttpApplication
     {
+        //version
+        public const String version = "v. 0.1";
+
         void Application_Start(object sender, EventArgs e)
         {
             // Code that runs on application startup

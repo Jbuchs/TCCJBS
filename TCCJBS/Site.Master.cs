@@ -14,6 +14,13 @@ namespace TCCJBS
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
         private string _antiXsrfTokenValue;
 
+        //message selon la date
+        protected string message()
+        {
+            // Get the current date.
+            return (DateTime.Now.CompareTo(Convert.ToDateTime("07:00:00 AM")) >= 0 && DateTime.Now.CompareTo(Convert.ToDateTime("05:00:00 PM")) <= 0) ? "Bonjour" : "Bonsoir";
+        }
+
         protected void Page_Init(object sender, EventArgs e)
         {
             // The code below helps to protect against XSRF attacks
